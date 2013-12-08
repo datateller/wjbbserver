@@ -12,16 +12,23 @@ from django.utils import http
 from datetime import *
 import json
 
+def check_user_name(username):
+    user = User.objects.get(username = username)
+    if user:
+        return "exist"
+    else:
+        return "available"
+
 def register(request):
-    username = request.POST.get('username')
-    password = request.POST.get('password')
+    username = request.GET.get('username')
+    password = request.GET.get('password')
     username = http.urlsafe_base64_decode(username)
     password = http.urlsafe_base64_decode(password)
     username = username.decode()
     password = password.decode()
     
-    user = User.objects.create_user(username = username, password = password)
-    user.save()
+    if check_user_name(username) == "exist":
+        return HttpResponse("DUPLICATE_NAME")
     
     baby = Baby.objects.create()
     baby_name = request.POST.get('name')
@@ -36,6 +43,8 @@ def register(request):
     baby.birthday = date.today()
     baby.sex = baby_sex
     
+    user = User.objects.create_user(username = username, password = password)
+    user.save()
     baby.parent_id = user.id
     print(baby.parent_id)
     baby.save()
@@ -61,7 +70,7 @@ def update(request):
     baby_sex = request.POST.get('babysex')
     user = auth.authenticate(username = username, password = password)
     if user is None:
-        return HttpResponse('auth_error')
+        return HttpResponse('AUTH_FAILED')
     baby = Baby.objects.get(id=user.id)
     if baby_weight:
         baby.weight = baby_weight
