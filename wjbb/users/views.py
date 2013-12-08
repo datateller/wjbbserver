@@ -72,6 +72,7 @@ def update(request):
     if baby_sex:
         baby.sex = baby_sex
     baby.save()
+    response = 'False'
     if baby is None:
         response = 'False'
     else:
@@ -86,7 +87,7 @@ def informationcheck(request):
     username = username.decode()
     password = password.decode()
     user = auth.authenticate(username = username, password = password)
-    response = ''
+    response = 'False'
     if user is None:
         response = 'False'
     else:
