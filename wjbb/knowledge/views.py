@@ -18,14 +18,14 @@ def getknowl(request):
         number = 5
     else:
         number = int(number)
-#     username = http.urlsafe_base64_decode(username)
-#     password = http.urlsafe_base64_decode(password)
-#     username = username.decode()
-#     password = password.decode()
+    username = http.urlsafe_base64_decode(username)
+    password = http.urlsafe_base64_decode(password)
+    username = username.decode()
+    password = password.decode()
     user = auth.authenticate(username = username, password = password)
     response = ''
     if user is None:
-        response = 'Auth False'
+        response = 'AUTH_FAILED'
     else:
         baby = Baby.objects.get(parent_id=user.id)
         age= int((date.today() - baby.birthday).days)
