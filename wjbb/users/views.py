@@ -14,7 +14,7 @@ import json
 import base64
 
 def check_user_name(username):
-    user = User.objects.filter(username__exact = username)
+    user = User.objects.get(username = username)
     if user:
         return "exist"
     else:
@@ -29,8 +29,8 @@ def register(request):
     username = username.decode()
     password = password.decode()
     
-    if check_user_name(username) == "exist":
-        return HttpResponse("DUPLICATE_NAME")
+    #if check_user_name(username) == "exist":
+        #return HttpResponse("DUPLICATE_NAME")
     
     print(username)
     print(password)
@@ -65,42 +65,19 @@ def register(request):
 
 def update(request):
     username = request.POST.get('username')
-    if not username:
-        return HttpResponse('USERNAME_CANNOT_BE_NULL')
-    else:
-        username = http.urlsafe_base64_decode(username)
-        username = username.decode()
-        
-    if not User.objects.filter(username__exact = username):
-        return HttpResponse('USER_NOT_EXIST')
-    
     password = request.POST.get('password')
-    if not password:
-        return HttpResponse('PASSWORD_CANNOT_BE_NULL')
-    else:
-        password = http.urlsafe_base64_decode(password)
-        password = password.decode()
-
-    user = User.objects.get(username = username)
-    if not user.check_password(password):
-        return HttpResponse('AUTH_FAILED')
-
-    newpassword = request.POST.get('newpassword')
-    if newpassword:
-        newpassword = http.urlsafe_base64_decode(newpassword)
-        newpassword = newpassword.decode()
-        user.set_password(newpassword)
-        user.save()
-        
+    username = http.urlsafe_base64_decode(username)
+    password = http.urlsafe_base64_decode(password)
+    username = username.decode()
+    password = password.decode()
     baby_height = request.POST.get('babyheight')
     baby_weight = request.POST.get('babyweight')
     baby_birthday = request.POST.get('birthday')
     baby_sex = request.POST.get('babysex')
-    baby_name = request.POST.get('babyname')
-    
-    baby = Baby.objects.get(parent_id = user.id)
-    if not baby:
-        return HttpResponse('BABY_NOT_EXIST')
+    user = auth.authenticate(username = username, password = password)
+    if user is None:
+        return HttpResponse('AUTH_FAILED')
+    baby = Baby.objects.get(id=user.id)
     if baby_weight:
         baby.weight = baby_weight
     if baby_height:
@@ -109,10 +86,13 @@ def update(request):
         baby.birthday = baby_birthday
     if baby_sex:
         baby.sex = baby_sex
-    if baby_name:
-        baby.name = baby_name
     baby.save()
-    return HttpResponse('True')
+    response = 'False'
+    if baby is None:
+        response = 'False'
+    else:
+        response = 'True'
+    return HttpResponse(response)
 
 #GET->POST  informationcheck->InformationCheck
 def informationcheck(request):
