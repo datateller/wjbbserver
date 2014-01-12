@@ -8,7 +8,7 @@ from django.utils import http
 from django.core import serializers
 from datetime import *
 from utils.users import *
-import base64, json
+import base64, json, random
 
 # Create your views here.
 
@@ -45,6 +45,8 @@ def knowledges_list_encode(knowls):
         tags = knowl.keyword.split(';')
         t['knowledgeId'] = knowl.id
         t['knowledgeTitle'] = knowl.title
+        t['pic'] = 'http://xzh2.cloudapp.net/pic/'+str(random.randint(0,9))+'.jpg'
+        t['icon'] = 'http://xzh2.cloudapp.net/icon/'+str(random.randint(0, 9))+'.png'
         rets.append(t)
     return json.dumps(rets, ensure_ascii=False)
 

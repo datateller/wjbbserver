@@ -49,9 +49,9 @@ MIDDLEWARE_CLASSES = (
     #'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
-ROOT_URLCONF = 'wjbb.urls'
+ROOT_URLCONF = 'wjbbserver.urls'
 
-WSGI_APPLICATION = 'wjbb.wsgi.application'
+WSGI_APPLICATION = 'wjbbserver.wsgi.application'
 
 
 # Database
