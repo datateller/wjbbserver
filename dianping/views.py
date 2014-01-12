@@ -89,22 +89,27 @@ def getbbyid(business_id):
 
 
 def encodebusinessbasic(bdict):
-    ret = {}
-    ret['businesses'] = []
+    ret = []
+    #ret['businesses'] = []
     for b in bdict['businesses']:
         retb = {}
         retb['business_id'] = b['business_id']
         retb['name'] = b['name']
         retb['address'] = b['address']
         retb['telephone'] = b['telephone']
-        ret['businesses'].append(retb)
+        ret.append(retb)
     return json.dumps(ret, ensure_ascii=False)
 
 def getbusinessbasic(request):
+    print('begin')
     username = request.POST.get('username')
     password = request.POST.get('password')
     latitude = request.POST.get('latitude')
     longitude = request.POST.get('longitude')
+    print(username)
+    print(password)
+    print(latitude)
+    print(longitude)
     if not (username and password and latitude and longitude):
         return HttpResponse('PARAM_ERROR')
     username = http.urlsafe_base64_decode(username)

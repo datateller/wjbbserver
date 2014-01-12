@@ -54,6 +54,9 @@ def knowledges_list_encode(knowls):
         tags = knowl.keyword.split(';')
         t['knowledgeId'] = knowl.id
         t['knowledgeTitle'] = knowl.title
+        import random
+        t['pic'] = 'http://xzh2.cloudapp.net/pic/'+str(random.randint(0,9))+'.jpg' 
+        t['icon'] = 'http://xzh2.cloudapp.net/icon/'+str(random.randint(0, 9))+'.gif'
         rets.append(t)
     return json.dumps(rets, ensure_ascii=False)
 
@@ -122,8 +125,8 @@ def knowledges_encode(knowls):
         t['knowledgePicLink'] = ""
         t['tags'] = tags
         t['commericals'] = commercials
-        t['icon'] = "http://wjbb.cloudapp.net:8000/static/img/icon/" + str(random.randint(0,9)) + ".gif"
-        t['pic'] = "http://wjbb.cloudapp.net:8000/static/img/pic/" + str(random.randint(0,9)) + ".jpg"
+        t['icon'] = "http://xzh2.cloudapp.net/icon/" + str(random.randint(0,9)) + ".png"
+        t['pic'] = "http://xzh2.cloudapp.net/pic/" + str(random.randint(0,9)) + ".jpg"
         rets.append(t)
     return json.dumps(rets, ensure_ascii=False)
     
