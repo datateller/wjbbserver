@@ -11,4 +11,5 @@ urlpatterns = patterns('',
     url(r'^getknowl/', views.getknowl, name='getknowl'),
     url(r'^getknowllist/', views.getknowllist, name='getknowllist'),
     url(r'^getknowlbyid/',views.getknowlbyid, name='getknowlbyid'),
+    url(r'^collectknowl/',views.collectknowl, name='collectknowl'),
 )

@@ -4,37 +4,41 @@ Created on Nov 2, 2013
 
 @author: shengeng
 '''
+
 from django.http import *
 from baby.models import Baby
 from django.contrib import auth
 from django.contrib.auth.models import User
 from django.utils import http
 from datetime import *
-import json
-import base64
+from utils.users import *
+import json, base64
 
 def check_user_name(username):
-    user = User.objects.get(username = username)
-    if user:
+    if User.objects.filter(username=username).exists():
         return "exist"
     else:
         return "available"
 
 def register(request):
 
-    username = request.POST.get('username')
-    password = request.POST.get('password')
-    username = http.urlsafe_base64_decode(username)
-    password = http.urlsafe_base64_decode(password)
-    username = username.decode()
-    password = password.decode()
+    if not DEBUG:
+        username = request.POST.get('username')
+        password = request.POST.get('password')
+        username = http.urlsafe_base64_decode(username)
+        password = http.urlsafe_base64_decode(password)
+        username = username.decode()
+        password = password.decode()
+    else:
+        username = request.GET.get('username')
+        password = request.GET.get('password')
     
-    #if check_user_name(username) == "exist":
-        #return HttpResponse("DUPLICATE_NAME")
+    if check_user_name(username) == "exist":
+        return HttpResponse("DuplicateName")
     
     print(username)
     print(password)
-    
+
     baby = Baby.objects.create()
     baby_name = request.POST.get('name')
     baby_height = request.POST.get('babyheight')
@@ -64,19 +68,21 @@ def register(request):
     return HttpResponse(response)
 
 def update(request):
-    username = request.POST.get('username')
-    password = request.POST.get('password')
-    username = http.urlsafe_base64_decode(username)
-    password = http.urlsafe_base64_decode(password)
-    username = username.decode()
-    password = password.decode()
-    baby_height = request.POST.get('babyheight')
-    baby_weight = request.POST.get('babyweight')
-    baby_birthday = request.POST.get('birthday')
-    baby_sex = request.POST.get('babysex')
-    user = auth.authenticate(username = username, password = password)
-    if user is None:
+    (authed, username, password, user) = auth_user(request)
+    if not authed or not user:
         return HttpResponse('AUTH_FAILED')
+    if not DEBUG:
+        baby_height = request.POST.get('babyheight')
+        baby_weight = request.POST.get('babyweight')
+        baby_birthday = request.POST.get('birthday')
+        baby_sex = request.POST.get('babysex')
+        baby_name = request.POST.get('babyname')
+    else:
+        baby_height = request.GET.get('babyheight')
+        baby_weight = request.GET.get('babyweight')
+        baby_birthday = request.GET.get('birthday')
+        baby_sex = request.GET.get('babysex')
+        baby_name = request.GET.get('babyname')
     baby = Baby.objects.get(id=user.id)
     if baby_weight:
         baby.weight = baby_weight
@@ -86,6 +92,8 @@ def update(request):
         baby.birthday = baby_birthday
     if baby_sex:
         baby.sex = baby_sex
+    if baby_name:
+        baby.name = baby_name
     baby.save()
     response = 'False'
     if baby is None:
@@ -96,16 +104,8 @@ def update(request):
 
 #GET->POST  informationcheck->InformationCheck
 def informationcheck(request):
-    username = request.POST.get('username')
-    password = request.POST.get('password')
-    username = http.urlsafe_base64_decode(username)
-    password = http.urlsafe_base64_decode(password)
-    username = username.decode()
-    password = password.decode()
-    user = auth.authenticate(username = username, password = password)
-    response = 'False'
-    if user is None:
-        response = 'False'
+    (authed, username, password, user) = auth_user(request)
+    if not authed or not user:
+        return HttpResponse('False')
     else:
-        response = 'True'
-    return HttpResponse(response)
+        return HttpResponse('True')
