@@ -12,7 +12,7 @@ from django.contrib.auth.models import User
 from django.utils import http
 from datetime import *
 from utils.users import *
-import json, base64
+import json, base64, traceback
 
 def check_user_name(username):
     if User.objects.filter(username=username).exists():
@@ -21,7 +21,6 @@ def check_user_name(username):
         return "available"
 
 def register(request):
-
     if not DEBUG:
         username = request.POST.get('username')
         password = request.POST.get('password')
@@ -104,8 +103,22 @@ def update(request):
 
 #GET->POST  informationcheck->InformationCheck
 def informationcheck(request):
-    (authed, username, password, user) = auth_user(request)
-    if not authed or not user:
-        return HttpResponse('False')
-    else:
-        return HttpResponse('True')
+    try:
+        #(authed, username, password, user) = auth_user(request)
+        username = request.POST.get('username')
+        password = request.POST.get('password')
+        print(request.POST)
+        print(username)
+        print(password)
+        username = http.urlsafe_base64_decode(username)
+        password = http.urlsafe_base64_decode(password)
+        username = username.decode()
+        password = password.decode()
+        user = auth.authenticate(username = username, password = password)
+        if not user:
+            return HttpResponse('False')
+        else:
+            return HttpResponse('True')
+    except Exception as e:
+        print(e)
+        return HttpResponse(e)

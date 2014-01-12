@@ -4,7 +4,7 @@ Created on 2014年1月12日
 @author: shengeng
 '''
 
-DEBUG = True
+DEBUG = False
 
 from django.http import *
 from baby.models import Baby
@@ -27,8 +27,10 @@ def auth_user(request):
     else:
         username = request.GET.get('username')
         password = request.GET.get('password')
+        print(username)
+        print(password)
     user = auth.authenticate(username = username, password = password)
     if user is None:
-        return (False, username, password, user)
+        return(False, username, password, user)
     else:
-        return (True, username, password, user)
+        return(True, username, password, user)

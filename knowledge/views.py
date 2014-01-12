@@ -51,7 +51,7 @@ def knowledges_list_encode(knowls):
     return json.dumps(rets, ensure_ascii=False)
 
 def getknowlbyid(request):
-    knowlid = request.GET.get('knowledgeid')
+    knowlid = request.POST.get('knowledgeid')
     if not knowlid:
         return HttpResponse('ID_NULL')
     knowledge = Knowledge.objects.get(id=knowlid)
@@ -115,7 +115,8 @@ def knowledges_encode(knowls):
         t['knowledgePicLink'] = ""
         t['tags'] = tags
         t['commericals'] = commercials
-        
+        t['pic'] = 'http://xzh2.cloudapp.net/pic/'+str(random.randint(0,9))+'.jpg'
+        t['icon'] = 'http://xzh2.cloudapp.net/icon/'+str(random.randint(0, 9))+'.png'        
         rets.append(t)
     return json.dumps(rets, ensure_ascii=False)
     
