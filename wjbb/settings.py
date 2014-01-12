@@ -60,7 +60,7 @@ WSGI_APPLICATION = 'wjbb.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': 'wjbb',                      # Or path to database file if using sqlite3.
+        'NAME': 'wjbbserverdb',                      # Or path to database file if using sqlite3.
         # The following settings are not used with sqlite3:
         'USER': 'wjbb',
         'PASSWORD': 'wjbb111',
@@ -85,14 +85,5 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
-SITE_ROOT=os.path.join(os.path.abspath(os.path.dirname(__file__)),'..')
+
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(SITE_ROOT,'static')
-STATIC_PATH = os.path.join( os.path.dirname(os.path.dirname(__file__)), 'static')
-STATICFILES_DIRS = (
-    # Put strings here, like "/home/html/static" or "C:/www/django/static".
-    # Always use forward slashes, even on Windows.
-    # Don't forget to use absolute paths, not relative paths.
-    ("apk", os.path.join(STATIC_ROOT,'apk')),
-    ("img",os.path.join(STATIC_ROOT,'img')),
-)

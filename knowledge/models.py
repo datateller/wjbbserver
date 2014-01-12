@@ -11,3 +11,7 @@ class Knowledge(models.Model):
     min = models.IntegerField(10)
     max = models.IntegerField(10)
     apply_sex = models.TextField(10)
+
+class KnowledgeCollection(models.Model):
+    user_id = models.IntegerField(10,null=True)
+    collection_list = models.CharField(max_length=20000,null=True)
