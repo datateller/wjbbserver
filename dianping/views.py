@@ -20,8 +20,8 @@ def getblist(latitude, longitude):
     apiUrl = "http://api.dianping.com/v1/business/find_businesses"
     paramSet = []
     paramSet.append(("format", "json"))
-    paramSet.append(("latitude", "31.2"))
-    paramSet.append(("longitude", "121.420033"))
+    paramSet.append(("latitude", latitude))
+    paramSet.append(("longitude", longitude))
     paramSet.append(("limit", "20"))
     paramSet.append(("radius", "2000"))
     paramSet.append(("offset_type", "0"))
