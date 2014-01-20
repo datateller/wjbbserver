@@ -39,7 +39,7 @@ def register(request):
     print(password)
 
     baby = Baby.objects.create()
-    baby_name = request.POST.get('name')
+    baby_name = request.POST.get('babyname')
     baby_height = request.POST.get('babyheight')
     baby_weight = request.POST.get('babyweight')
     baby_birthday = request.POST.get('birthday')
@@ -48,7 +48,7 @@ def register(request):
     baby.name = baby_name
     baby.height = baby_height
     baby.weight = baby_weight
-    baby.birthday = date.today()
+    baby.birthday = baby_birthday
     baby.sex = baby_sex
     
     user = User.objects.create_user(username = username, password = password)
@@ -93,6 +93,7 @@ def update(request):
         baby.sex = baby_sex
     if baby_name:
         baby.name = baby_name
+    print(baby.name)
     baby.save()
     response = 'False'
     if baby is None:

@@ -1,0 +1,396 @@
+[12/Jan/2014 22:56:37] "POST /user/register/ HTTP/1.1" 200 13
+[12/Jan/2014 22:56:56] "POST /user/informationcheck/ HTTP/1.1" 200 4
+[12/Jan/2014 22:56:58] "POST /user/informationcheck/ HTTP/1.1" 200 43
+[12/Jan/2014 22:58:48] "POST /user/informationcheck/ HTTP/1.1" 200 4
+[12/Jan/2014 22:59:00] "POST /user/informationcheck/ HTTP/1.1" 200 4
+[12/Jan/2014 22:59:08] "POST /dianping/getbusinessbyid/ HTTP/1.1" 200 472
+[12/Jan/2014 22:59:14] "POST /user/informationcheck/ HTTP/1.1" 200 4
+[12/Jan/2014 23:03:31] "POST /user/informationcheck/ HTTP/1.1" 200 4
+[12/Jan/2014 23:04:28] "POST /user/informationcheck/ HTTP/1.1" 200 4
+[12/Jan/2014 23:08:03] "POST /user/informationcheck/ HTTP/1.1" 200 4
+[12/Jan/2014 23:08:43] "POST /user/informationcheck/ HTTP/1.1" 200 4
+[12/Jan/2014 23:10:41] "GET / HTTP/1.1" 404 2233
+[12/Jan/2014 23:11:27] "GET / HTTP/1.1" 404 2233
+[12/Jan/2014 23:14:21] "POST /user/informationcheck/ HTTP/1.1" 200 4
+[12/Jan/2014 23:14:21] "GET /static/img/icon/icon.gif HTTP/1.1" 200 5581
+[12/Jan/2014 23:16:51] "POST /user/informationcheck/ HTTP/1.1" 200 4
+[12/Jan/2014 23:17:14] "POST /user/register/ HTTP/1.1" 200 13
+[12/Jan/2014 23:17:31] "POST /user/register/ HTTP/1.1" 200 4
+[12/Jan/2014 23:17:55] "POST /user/register/ HTTP/1.1" 200 4
+[13/Jan/2014 08:40:05] "POST /user/informationcheck/ HTTP/1.1" 200 4
+[13/Jan/2014 08:40:33] "POST /user/informationcheck/ HTTP/1.1" 200 4
+[13/Jan/2014 08:43:14] "POST /user/informationcheck/ HTTP/1.1" 200 4
+[13/Jan/2014 08:43:19] "POST /knowledge/getknowllist/ HTTP/1.1" 200 856
+[13/Jan/2014 08:43:20] "POST /knowledge/getknowllist/ HTTP/1.1" 200 840
+[13/Jan/2014 08:43:21] "POST /knowledge/getknowllist/ HTTP/1.1" 200 859
+[13/Jan/2014 08:43:24] "POST /knowledge/getknowllist/ HTTP/1.1" 200 846
+[13/Jan/2014 08:43:28] "POST /knowledge/getknowllist/ HTTP/1.1" 200 862
+[13/Jan/2014 08:43:34] "POST /dianping/getbusinessbasic/ HTTP/1.1" 200 3680
+[13/Jan/2014 08:44:09] "POST /user/informationcheck/ HTTP/1.1" 200 4
+[13/Jan/2014 08:44:44] "POST /knowledge/getknowlbyid/ HTTP/1.1" 200 6164
+[13/Jan/2014 08:44:46] "POST /knowledge/getknowlbyid/ HTTP/1.1" 200 2105
+[13/Jan/2014 08:44:51] "POST /knowledge/getknowllist/ HTTP/1.1" 200 868
+[13/Jan/2014 08:44:54] "POST /knowledge/getknowllist/ HTTP/1.1" 200 867
+[13/Jan/2014 08:44:56] "POST /knowledge/getknowllist/ HTTP/1.1" 200 856
+[13/Jan/2014 08:49:14] "POST /user/informationcheck/ HTTP/1.1" 200 4
+[13/Jan/2014 08:49:33] "POST /dianping/getbusinessbyid/ HTTP/1.1" 200 499
+[13/Jan/2014 08:49:41] "POST /knowledge/getknowllist/ HTTP/1.1" 200 866
+[13/Jan/2014 08:49:44] "POST /knowledge/getknowllist/ HTTP/1.1" 200 875
+[13/Jan/2014 08:49:45] "POST /knowledge/getknowllist/ HTTP/1.1" 200 854
+[13/Jan/2014 08:50:42] "POST /user/informationcheck/ HTTP/1.1" 200 4
+[13/Jan/2014 08:50:46] "POST /knowledge/getknowlbyid/ HTTP/1.1" 200 10973
+[13/Jan/2014 08:50:49] "POST /knowledge/getknowllist/ HTTP/1.1" 200 855
+[13/Jan/2014 08:50:51] "POST /knowledge/getknowllist/ HTTP/1.1" 200 857
+[13/Jan/2014 08:50:55] "POST /knowledge/getknowlbyid/ HTTP/1.1" 200 2602
+[13/Jan/2014 08:51:19] "POST /dianping/getbusinessbyid/ HTTP/1.1" 200 470
+[13/Jan/2014 11:02:59] "POST /user/informationcheck/ HTTP/1.1" 200 4
+[13/Jan/2014 11:03:05] "POST /dianping/getbusinessbasic/ HTTP/1.1" 200 3680
+[13/Jan/2014 11:03:23] "POST /knowledge/getknowllist/ HTTP/1.1" 200 838
+[13/Jan/2014 11:03:27] "POST /knowledge/getknowlbyid/ HTTP/1.1" 200 6614
+[13/Jan/2014 11:03:31] "POST /knowledge/getknowlbyid/ HTTP/1.1" 200 2473
+[13/Jan/2014 11:03:35] "POST /knowledge/getknowlbyid/ HTTP/1.1" 200 7174
+[13/Jan/2014 11:03:40] "POST /knowledge/getknowlbyid/ HTTP/1.1" 200 939
+[13/Jan/2014 11:03:50] "POST /dianping/getbusinessbyid/ HTTP/1.1" 200 487
+[13/Jan/2014 11:03:57] "POST /dianping/getbusinessbyid/ HTTP/1.1" 200 481
+[13/Jan/2014 11:04:40] "POST /dianping/getbusinessbyid/ HTTP/1.1" 200 468
+[13/Jan/2014 11:05:12] "POST /knowledge/getknowllist/ HTTP/1.1" 200 856
+[13/Jan/2014 11:05:16] "POST /knowledge/getknowlbyid/ HTTP/1.1" 200 3303
+[13/Jan/2014 11:05:23] "POST /knowledge/getknowlbyid/ HTTP/1.1" 200 1537
+[13/Jan/2014 19:52:20] "POST /user/informationcheck/ HTTP/1.1" 200 4
+[13/Jan/2014 19:52:38] "POST /knowledge/getknowlbyid/ HTTP/1.1" 200 1116
+[13/Jan/2014 19:52:49] "POST /dianping/getbusinessbasic/ HTTP/1.1" 200 3680
+[13/Jan/2014 19:53:35] "POST /user/informationcheck/ HTTP/1.1" 200 4
+[13/Jan/2014 20:41:23] "POST /user/informationcheck/ HTTP/1.1" 200 4
+[13/Jan/2014 20:41:30] "POST /knowledge/getknowllist/ HTTP/1.1" 200 860
+[13/Jan/2014 20:43:38] "POST /user/update/ HTTP/1.1" 500 108379
+[13/Jan/2014 20:43:45] "POST /user/informationcheck/ HTTP/1.1" 200 4
+[13/Jan/2014 20:45:51] "POST /user/informationcheck/ HTTP/1.1" 200 4
+[13/Jan/2014 20:49:07] "POST /knowledge/getknowlbyid/ HTTP/1.1" 200 1445
+[13/Jan/2014 20:49:09] "POST /knowledge/getknowlbyid/ HTTP/1.1" 200 1445
+[13/Jan/2014 20:51:27] "GET /static/apk/WJBBNew.apk HTTP/1.1" 200 536058
+[13/Jan/2014 21:00:04] "POST /user/informationcheck/ HTTP/1.1" 200 4
+[13/Jan/2014 21:00:18] "POST /user/informationcheck/ HTTP/1.1" 200 4
+[13/Jan/2014 21:00:20] "POST /knowledge/getknowllist/ HTTP/1.1" 200 871
+[13/Jan/2014 21:00:24] "POST /knowledge/getknowllist/ HTTP/1.1" 200 869
+[13/Jan/2014 21:00:29] "POST /knowledge/getknowllist/ HTTP/1.1" 200 855
+[13/Jan/2014 21:00:38] "POST /knowledge/getknowllist/ HTTP/1.1" 200 841
+[13/Jan/2014 21:00:41] "POST /knowledge/getknowllist/ HTTP/1.1" 200 871
+[13/Jan/2014 21:08:06] "POST /user/informationcheck/ HTTP/1.1" 200 4
+[13/Jan/2014 21:08:10] "POST /knowledge/getknowlbyid/ HTTP/1.1" 200 4971
+[13/Jan/2014 21:08:14] "POST /knowledge/getknowlbyid/ HTTP/1.1" 200 4127
+[13/Jan/2014 21:08:44] "POST /user/informationcheck/ HTTP/1.1" 200 4
+[13/Jan/2014 21:12:09] "POST /user/informationcheck/ HTTP/1.1" 200 4
+[13/Jan/2014 21:13:01] "POST /user/update/ HTTP/1.1" 500 109544
+[13/Jan/2014 21:13:03] "POST /user/informationcheck/ HTTP/1.1" 200 4
+[13/Jan/2014 21:13:24] "POST /dianping/getbusinessbyid/ HTTP/1.1" 200 470
+[13/Jan/2014 21:13:27] "POST /dianping/getbusinessbyid/ HTTP/1.1" 200 481
+[13/Jan/2014 21:13:29] "POST /dianping/getbusinessbyid/ HTTP/1.1" 200 489
+Validating models...
+
+0 errors found
+January 12, 2014 - 22:56:29
+Django version 1.6.1, using settings 'wjbbserver.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+<QueryDict: {'username': ['eHpo\n'], 'password': ['MTExMTEx\n']}>
+eHpo
+
+MTExMTEx
+
+<QueryDict: {}>
+None
+None
+'NoneType' object has no attribute 'encode'
+<QueryDict: {'username': ['YQ==\n'], 'password': ['YQ==\n']}>
+YQ==
+
+YQ==
+
+<QueryDict: {'username': ['c2c=\n'], 'password': ['c2c=\n']}>
+c2c=
+
+c2c=
+
+YQ==
+
+YQ==
+
+<QueryDict: {'username': ['c2c=\n'], 'password': ['c2c=\n']}>
+c2c=
+
+c2c=
+
+<QueryDict: {'username': ['eHpo\n'], 'password': ['MTExMTEx\n']}>
+eHpo
+
+MTExMTEx
+
+<QueryDict: {'username': ['eHpo\n'], 'password': ['MTExMTEx\n']}>
+eHpo
+
+MTExMTEx
+
+<QueryDict: {'username': ['eHpo\n'], 'password': ['MTExMTEx\n']}>
+eHpo
+
+MTExMTEx
+
+<QueryDict: {'username': ['eHpo\n'], 'password': ['MTExMTEx\n']}>
+eHpo
+
+MTExMTEx
+
+<QueryDict: {'username': ['YWJj\n'], 'password': ['YWJj\n']}>
+YWJj
+
+YWJj
+
+<QueryDict: {'username': ['YWJj\n'], 'password': ['YWJj\n']}>
+YWJj
+
+YWJj
+
+gh
+gh
+36
+36
+rec
+rec
+37
+37
+<QueryDict: {'username': ['YQ==\n'], 'password': ['YQ==\n']}>
+YQ==
+
+YQ==
+
+<QueryDict: {'username': ['YQ==\n'], 'password': ['YQ==\n']}>
+YQ==
+
+YQ==
+
+<QueryDict: {'username': ['YQ==\n'], 'password': ['YQ==\n']}>
+YQ==
+
+YQ==
+
+YQ==
+
+YQ==
+
+YQ==
+
+YQ==
+
+YQ==
+
+YQ==
+
+YQ==
+
+YQ==
+
+YQ==
+
+YQ==
+
+YQ==
+
+YQ==
+
+http://api.dianping.com/v1/business/find_businesses?appkey=757541619&sign=8F9CFD113A85E3271CFD1E069C67316A266E2AC5&format=json&latitude=31.2&longitude=121.420033&limit=20&radius=2000&offset_type=0&sort=7&category=%E6%97%A9%E6%95%99%E4%B8%AD%E5%BF%83%2C%E5%B9%BC%E5%84%BF%E5%9B%AD%2C%E4%BA%B2%E5%AD%90%E6%B8%B8%E4%B9%90%2C%E4%BA%B2%E5%AD%90%E8%B4%AD%E7%89%A9%2C%E5%AD%95%E4%BA%A7%E6%8A%A4%E7%90%86
+<QueryDict: {'username': ['YQ==\n'], 'password': ['YQ==\n']}>
+YQ==
+
+YQ==
+
+YQ==
+
+YQ==
+
+YQ==
+
+YQ==
+
+YQ==
+
+YQ==
+
+<QueryDict: {'username': ['c2c=\n'], 'password': ['c2c=\n']}>
+c2c=
+
+c2c=
+
+c2c=
+
+c2c=
+
+c2c=
+
+c2c=
+
+c2c=
+
+c2c=
+
+c2c=
+
+c2c=
+
+<QueryDict: {'username': ['c2c=\n'], 'password': ['c2c=\n']}>
+c2c=
+
+c2c=
+
+c2c=
+
+c2c=
+
+c2c=
+
+c2c=
+
+c2c=
+
+c2c=
+
+<QueryDict: {'username': ['YWJj\n'], 'password': ['YWJj\n']}>
+YWJj
+
+YWJj
+
+YWJj
+
+YWJj
+
+http://api.dianping.com/v1/business/find_businesses?appkey=757541619&sign=8F9CFD113A85E3271CFD1E069C67316A266E2AC5&format=json&latitude=31.2&longitude=121.420033&limit=20&radius=2000&offset_type=0&sort=7&category=%E6%97%A9%E6%95%99%E4%B8%AD%E5%BF%83%2C%E5%B9%BC%E5%84%BF%E5%9B%AD%2C%E4%BA%B2%E5%AD%90%E6%B8%B8%E4%B9%90%2C%E4%BA%B2%E5%AD%90%E8%B4%AD%E7%89%A9%2C%E5%AD%95%E4%BA%A7%E6%8A%A4%E7%90%86
+YWJj
+
+YWJj
+
+YWJj
+
+YWJj
+
+YWJj
+
+YWJj
+
+YWJj
+
+YWJj
+
+YWJj
+
+YWJj
+
+<QueryDict: {'username': ['eHpo\n'], 'password': ['MTExMTEx\n']}>
+eHpo
+
+MTExMTEx
+
+eHpo
+
+MTExMTEx
+
+http://api.dianping.com/v1/business/find_businesses?appkey=757541619&sign=8F9CFD113A85E3271CFD1E069C67316A266E2AC5&format=json&latitude=31.2&longitude=121.420033&limit=20&radius=2000&offset_type=0&sort=7&category=%E6%97%A9%E6%95%99%E4%B8%AD%E5%BF%83%2C%E5%B9%BC%E5%84%BF%E5%9B%AD%2C%E4%BA%B2%E5%AD%90%E6%B8%B8%E4%B9%90%2C%E4%BA%B2%E5%AD%90%E8%B4%AD%E7%89%A9%2C%E5%AD%95%E4%BA%A7%E6%8A%A4%E7%90%86
+<QueryDict: {'username': ['eHpo\n'], 'password': ['MTExMTEx\n']}>
+eHpo
+
+MTExMTEx
+
+<QueryDict: {'username': ['eHpo\n'], 'password': ['MTExMTEx\n']}>
+eHpo
+
+MTExMTEx
+
+eHpo
+
+MTExMTEx
+
+eHpo
+
+MTExMTEx
+
+<QueryDict: {'username': ['eHpo\n'], 'password': ['MTExMTEx\n']}>
+eHpo
+
+MTExMTEx
+
+<QueryDict: {'username': ['eHpo\n'], 'password': ['MTExMTEx\n']}>
+eHpo
+
+MTExMTEx
+
+<QueryDict: {'username': ['eHpo\n'], 'password': ['MTExMTEx\n']}>
+eHpo
+
+MTExMTEx
+
+<QueryDict: {'username': ['eHpo\n'], 'password': ['MTExMTEx\n']}>
+eHpo
+
+MTExMTEx
+
+eHpo
+
+MTExMTEx
+
+eHpo
+
+MTExMTEx
+
+eHpo
+
+MTExMTEx
+
+eHpo
+
+MTExMTEx
+
+eHpo
+
+MTExMTEx
+
+<QueryDict: {'username': ['eHpo\n'], 'password': ['MTExMTEx\n']}>
+eHpo
+
+MTExMTEx
+
+<QueryDict: {'username': ['eHpo\n'], 'password': ['MTExMTEx\n']}>
+eHpo
+
+MTExMTEx
+
+<QueryDict: {'username': ['eHpo\n'], 'password': ['MTExMTEx\n']}>
+eHpo
+
+MTExMTEx
+
+eHpo
+
+MTExMTEx
+
+<QueryDict: {'username': ['eHpo\n'], 'password': ['MTExMTEx\n']}>
+eHpo
+
+MTExMTEx
+
+eHpo
+
+MTExMTEx
+
+eHpo
+
+MTExMTEx
+
+eHpo
+
+MTExMTEx
+
+Validating models...
+
+0 errors found
+January 14, 2014 - 01:02:06
+Django version 1.6.1, using settings 'wjbbserver.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
