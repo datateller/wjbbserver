@@ -394,3 +394,11 @@ January 14, 2014 - 01:02:06
 Django version 1.6.1, using settings 'wjbbserver.settings'
 Starting development server at http://0.0.0.0:8000/
 Quit the server with CONTROL-C.
+[20/Jan/2014 18:24:52] "GET / HTTP/1.1" 404 2233
+Validating models...
+
+0 errors found
+January 20, 2014 - 18:24:29
+Django version 1.6.1, using settings 'wjbbserver.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
