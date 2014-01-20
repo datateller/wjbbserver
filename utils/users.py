@@ -4,7 +4,7 @@ Created on 2014年1月12日
 @author: shengeng
 '''
 
-DEBUG = False
+DEBUG = True
 
 from django.http import *
 from baby.models import Baby

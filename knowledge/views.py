@@ -45,8 +45,9 @@ def knowledges_list_encode(knowls):
         tags = knowl.keyword.split(';')
         t['knowledgeId'] = knowl.id
         t['knowledgeTitle'] = knowl.title
-        t['pic'] = 'http://xzh2.cloudapp.net/pic/'+str(random.randint(0,9))+'.jpg'
-        t['icon'] = 'http://xzh2.cloudapp.net/icon/'+str(random.randint(0, 9))+'.png'
+        t['pic'] = 'http://wjbb.cloudapp.net/pic/'+str(random.randint(0,9))+'.jpg'
+        t['icon'] = 'http://wjbb.cloudapp.net/icon/'+str(random.randint(0, 9))+'.png'
+        t['abstract'] = "%s..."%"".join(knowl.content[:40].split())
         rets.append(t)
     return json.dumps(rets, ensure_ascii=False)
 
@@ -69,10 +70,6 @@ def getknowl(request):
         number = 5
     else:
         number = int(number)
-#     username = http.urlsafe_base64_decode(username)
-#     password = http.urlsafe_base64_decode(password)
-#     username = username.decode()
-#     password = password.decode()
     response = ''
     if user is None:
         response = 'Auth False'
@@ -115,8 +112,8 @@ def knowledges_encode(knowls):
         t['knowledgePicLink'] = ""
         t['tags'] = tags
         t['commericals'] = commercials
-        t['pic'] = 'http://xzh2.cloudapp.net/pic/'+str(random.randint(0,9))+'.jpg'
-        t['icon'] = 'http://xzh2.cloudapp.net/icon/'+str(random.randint(0, 9))+'.png'        
+        t['pic'] = 'http://wjbb.cloudapp.net/pic/'+str(random.randint(0,9))+'.jpg'
+        t['icon'] = 'http://wjbb.cloudapp.net/icon/'+str(random.randint(0, 9))+'.png'        
         rets.append(t)
     return json.dumps(rets, ensure_ascii=False)
     

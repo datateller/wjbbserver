@@ -86,13 +86,14 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
 SITE_ROOT=os.path.join(os.path.abspath(os.path.dirname(__file__)),'..')
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(SITE_ROOT,'static')
+
 STATIC_PATH = os.path.join( os.path.dirname(os.path.dirname(__file__)), 'static')
 STATICFILES_DIRS = (
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
-    ("apk", os.path.join(STATIC_ROOT,'apk')),
-    ("img",os.path.join(STATIC_ROOT,'img')),
+#     ("apk", os.path.join(STATIC_ROOT,'apk')),
+#     ("img",os.path.join(STATIC_ROOT,'img')),
+    os.path.join(SITE_ROOT,'static'),
 )
 
