@@ -12,4 +12,5 @@ urlpatterns = patterns('',
     url(r'^getknowllist/', views.getknowllist, name='getknowllist'),
     url(r'^getknowlbyid/',views.getknowlbyid, name='getknowlbyid'),
     url(r'^collectknowl/',views.collectknowl, name='collectknowl'),
+    url(r'^webview/([0-9]*)/$', views.web_view),
 )

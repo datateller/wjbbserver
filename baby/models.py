@@ -10,3 +10,5 @@ class Baby(models.Model):
     weight = models.FloatField(2,null=True)
     height = models.FloatField(2,null=True)
     parent_id = models.IntegerField(10,null=True)
+    homeaddr = models.TextField(max_length=100,null=True)
+    schooladdr = models.TextField(max_length=100,null=True)

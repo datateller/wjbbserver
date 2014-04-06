@@ -118,6 +118,7 @@ def getbusinessbasic(request):
     if user is None:
         response = 'AUTH_FAILED'
     else:
+        print('latitude is :' + latitude)
         response = encodebusinessbasic(getblist(latitude, longitude))
     return HttpResponse(response)
 

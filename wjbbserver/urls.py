@@ -12,4 +12,5 @@ urlpatterns = patterns('',
     url(r'^knowledge/', include('knowledge.urls')),
     url(r'^user/', include('users.urls')),
     url(r'^dianping/', include('dianping.urls')),
+    url(r'^weather/', include('weather.urls')),
 )
